@@ -79,6 +79,31 @@ function isLastCharDot(text) {
 }
 
 
+btnEq.addEventListener('click', function () {
+    displayResult.textContent = "";
+    operate();
+});
+
+function addNumbers(num1, num2) {
+    return num1 + num2;
+}
+
+function subtractNumbers(num1, num2) {
+    return num2 - num1;
+}
+
+function multiplyNumbers(num1, num2) {
+    return num1 * num2;
+}
+
+function divideNumbers(dividend, divisor) {
+    if (divisor === 0) {
+        return 'INCONCEIVABLE';
+    }
+    const result = dividend / divisor;
+    return Number(result.toFixed(10));
+}
+
 function operate() {
     const lastChar = displayPrevious.textContent.slice(-1);
     const firstNum = parseFloat(displayCurrent.textContent);
