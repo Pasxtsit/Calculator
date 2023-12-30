@@ -77,3 +77,38 @@ function isLastCharDot(text) {
     const lastChar = text[text.length - 1];
     return lastChar === ".";
 }
+
+
+function operate() {
+    const lastChar = displayPrevious.textContent.slice(-1);
+    const firstNum = parseFloat(displayCurrent.textContent);
+    const secondNum = parseFloat(displayPrevious.textContent.slice(0, -1));
+    let result;
+
+    switch (lastChar) {
+        case '+':
+            result = addNumbers(firstNum, secondNum);
+            break;
+        case '-':
+            result = subtractNumbers(firstNum, secondNum);
+            break;
+        case '*':
+            result = multiplyNumbers(firstNum, secondNum);
+            break;
+        case '÷':
+            result = divideNumbers(secondNum, firstNum);
+            break;
+        default:
+            alert("Invalid operation");
+            return;
+    }
+
+    if (!isNaN(result)) {
+        displayCurrent.textContent = result.toString();
+        displayResult.textContent = "";
+    } else {
+        displayResult.textContent = result.toString();
+        displayCurrent.textContent = "";
+    }
+    displayPrevious.textContent = "";
+}
