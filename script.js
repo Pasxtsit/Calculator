@@ -8,3 +8,9 @@ const btnC = document.querySelector(".C");
 const btnDel = document.querySelector(".Del");
 const btnEq = document.querySelector(".eq");
 const btnFlo = document.querySelector(".flo");
+
+btnC.addEventListener('click', function () {
+    displayCurrent.textContent = "";
+    displayPrevious.textContent = "";
+    displayResult.textContent = "";
+});
