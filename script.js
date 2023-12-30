@@ -14,3 +14,11 @@ btnC.addEventListener('click', function () {
     displayPrevious.textContent = "";
     displayResult.textContent = "";
 });
+
+btnDel.addEventListener('click', function () {
+    displayResult.textContent = "";
+    let currentValue = displayCurrent.textContent;
+    let newValue = currentValue.slice(0, -1);
+    displayCurrent.textContent = newValue;
+});
+
