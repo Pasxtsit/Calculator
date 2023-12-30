@@ -53,3 +53,27 @@ function addDecimal() {
         }
     }
 }
+
+opButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        displayResult.textContent = "";
+        const operator = button.textContent;
+        if (displayPrevious.textContent === "" && !isLastCharDot(displayCurrent.textContent)) {
+            addOperator(operator);
+            displayPrevious.textContent = displayCurrent.textContent;
+            displayCurrent.textContent = "";
+        }
+    });
+});
+function addOperator(operator) {
+    const currentValue = displayCurrent.textContent;
+    const lastChar = currentValue[currentValue.length - 1];
+
+    if (currentValue !== "" && !isNaN(lastChar)) {
+        displayCurrent.textContent += operator;
+    }
+}
+function isLastCharDot(text) {
+    const lastChar = text[text.length - 1];
+    return lastChar === ".";
+}
