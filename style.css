@@ -1,0 +1,70 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.calcBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 650px;
+    width: 500px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    background-color: rgb(46, 46, 46);
+    border: 2px solid black;
+}
+.workSpace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.displayBox {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    border-radius: 10px;
+    margin-top: 40px;
+    width: 450px;
+    height: 90px;
+    background-color: rgb(184, 233, 184);
+}
+.displayCurrent, .displayResult {
+font-size: 55px;
+margin: 2px;
+margin-top: 28px;
+position: absolute;
+}
+.displayPrevious {
+font-size: 25px;
+margin: 2px;
+margin-top: 2px ;
+margin-right: 7px;
+color: rgb(117, 117, 117);
+position: absolute;
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:500px;
+    margin: 10px;
+    margin-top:40px;
+}
+.btn {
+    width:100px;
+    height: 80px;
+    border-radius: 10px;
+    background-color: rgb(255, 153, 28);
+    font-size: 42px;
+    margin: 5px;
+}
+.btn:hover {
+    background-color: rgb(216, 175, 85);
+}
+.btnBig{
+    width:210px;
+    height: 80px;  
+}
