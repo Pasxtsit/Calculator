@@ -22,3 +22,19 @@ btnDel.addEventListener('click', function () {
     displayCurrent.textContent = newValue;
 });
 
+buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        displayResult.textContent = "";
+        const currentValue = displayCurrent.textContent;
+        const buttonValue = button.textContent;
+        const newValue = currentValue + buttonValue;
+
+        if (currentValue.length < 16) {
+            if (currentValue === "0" && !isNaN(Number(buttonValue))) {
+                displayCurrent.textContent = buttonValue;
+            } else {
+                displayCurrent.textContent = newValue;
+            }
+        }
+    });
+});
