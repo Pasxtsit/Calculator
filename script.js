@@ -38,3 +38,18 @@ buttons.forEach(function (button) {
         }
     });
 });
+
+btnFlo.addEventListener('click', function () {
+    displayResult.textContent = "";
+    addDecimal();
+});
+function addDecimal() {
+    const currentValue = displayCurrent.textContent;
+    if (!currentValue.includes('.')) {
+        if (currentValue === "") {
+            displayCurrent.textContent = "0.";
+        } else {
+            displayCurrent.textContent += ".";
+        }
+    }
+}
